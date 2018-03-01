@@ -1,2 +1,2 @@
 # Projet-RJBS
-Projet 3W Academy Strasbourg, création de site de restaurent.
+Projet 3W Academy Strasbourg, création de site de restaurant.
