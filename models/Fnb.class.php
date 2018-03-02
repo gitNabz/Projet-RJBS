@@ -1,5 +1,5 @@
 <?php
-class Products
+class Fnb
 {
 	private $id;
 	private $type;
@@ -7,6 +7,13 @@ class Products
 	private $description;
 	private $image;
 	private $price;
+	
+	public function __construct($pdo)
+	{
+		$this->pdo = $pdo;
+	}
+
+
 
 	public function getId()
 	{
@@ -32,7 +39,7 @@ class Products
 	{
 		return $this->description;
 	}
-	public function setDescription($description)
+	public function setDescription($Description)
 	{
 		$this->description = $description;
 	}
@@ -40,7 +47,7 @@ class Products
 	{
 		return $this->image;
 	}
-	public function setImage($image)
+	public function setImage($Image)
 	{
 		$this->image = $image;
 	} 
