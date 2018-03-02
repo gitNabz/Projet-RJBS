@@ -8,7 +8,7 @@ if (isset($_POST['action']))
 	{
 		
 		if (isset($_POST['type'], $_POST['name'],$_POST['description'], $_POST['image'],$_POST['price']))
-			
+		{
 			var_dump($_POST);
 			$type = $_POST['type'];
 			$name = $_POST['name'];
@@ -23,7 +23,6 @@ if (isset($_POST['action']))
 		}
 	}
 
-
-
+}
 
 ?>
