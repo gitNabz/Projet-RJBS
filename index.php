@@ -40,10 +40,7 @@ try
 	});
 
 
-	require('apps/base.php');
-	require('apps/traitements/fnb.php');
-	require('apps/traitements/admin.php');
-	require('apps/traitements/comments.php');
+	
 	require('apps/base.php');
 }
 catch (Exception $e)
