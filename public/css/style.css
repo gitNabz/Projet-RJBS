@@ -4,21 +4,21 @@
 }
 
 body {
-<<<<<<< HEAD
+
     font-family: 'Catamaran', sans-serif;
     font-size: 80.5%;
     color:#111111 ;
-=======
+
     font-family: 'Montserrat', sans-serif;
     font-size: 62.5%;
     color: #363636;
->>>>>>> 89179c72c618b94b847d24b3f31e6e63ff606edc
+
     background-color: #F5F5F5;
-    margin: 0 auto;
+
 
 }
 
-<<<<<<< HEAD
+
 
 .carte{
 	background-color: #F4E9E9;
@@ -41,23 +41,30 @@ ul li {
 	flex-wrap: wrap;
 	align-items: center;
 	padding: 20px
-=======
+}
 header a {
-    font-size: 3em;
+    margin: 0 auto;
+    font-size: 2.2em;
     text-decoration: none;
-    color: black;
+    color: #506982;
+}
+
+
+
+img {
+    width: 100%
 }
 
 header {
     display: flex;
     align-items: baseline;
     justify-content: space-around;
-    padding: 3%
+    padding: 5%
 }
 
 #logo {
     color: #363636;
-    font-size: 10em;
+    font-size: 8em;
     font-family: 'Great Vibes';
 }
 
@@ -69,15 +76,17 @@ header nav {
 
 header a {
 
-    padding: 5%
+    padding: 4%
 }
 
-main {
-    background-image: url(/public/img/background.jpg);
-    background-size: cover;
-    padding: 30%;
+.presentation {
+    height: 30%;
 }
 
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
 
 
 footer {
@@ -89,10 +98,11 @@ footer {
 }
 
 footer a {
-    font-size: 1.5em;
+    font-size: 1em;
     padding: 2%;
     color: black;
 }
+
 #mail {
     border-radius: 0.2em;
     border: 0px;
@@ -105,8 +115,11 @@ footer a {
     border: 0px;
     padding: 1%;
     color: white;
->>>>>>> 89179c72c618b94b847d24b3f31e6e63ff606edc
+
 }
+
+
 li img{
 	width: 100%;
 }
+
