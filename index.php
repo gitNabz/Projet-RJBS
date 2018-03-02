@@ -3,7 +3,7 @@ try
 {
 
 	session_start();
-	var_dump($_SESSION);
+	//var_dump($_SESSION);
 	// Tableau de configuration de PDO
 	$options = [
 		PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
@@ -18,7 +18,11 @@ try
 	}
 	$error='';
 	$page = 'home';
+
+	$access = ['home', 'menu', 'edit','admin', 'booking'];
+
 	$access = ['home','createfnb','carte','menu','admin'];
+
 	if (isset($_GET['page']))
 	{
 		// Si jamais la page se trouve dans la liste des pages
