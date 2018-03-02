@@ -32,10 +32,10 @@ class DeliveryManager
 	{
 		return $this->find($id);
 	}
-	public function create($name, $phone, $date, $hours, $address, $comments)
+	public function create($name, $phone, $date, $hours, $address, $comment)
 	{
-		$query = $this->pdo->prepare("INSERT INTO delivery (name, phone, date, hours, address, comments) VALUES(?, ?, ?, ?, ?, ?)");
-		$query->execute([$name, $phone, $date, $hours, $address, $comments]);
+		$query = $this->pdo->prepare("INSERT INTO delivery (name, phone, date, hours, address, comment) VALUES(?, ?, ?, ?, ?, ?)");
+		$query->execute([$name, $phone, $date, $hours, $address, $comment]);
 		$id = $this->pdo->lastInsertId();
 		return $this->find($id);
 	}
@@ -46,8 +46,8 @@ class DeliveryManager
 	}
 	public function save(Delivery $delivery)
 	{
-		$query = $this->pdo->prepare("UPDATE delivery SET name=?, phone=?, date=?, hours=?, address=?, comments=? WHERE id=?");
-		$query->execute([$delivery->getName(), $delivery->getPhone(), $delivery->getDate(), $delivery->getHours(), $delivery->getAddress(), $delivery->getComments(), $delivery->getId()]);
+		$query = $this->pdo->prepare("UPDATE delivery SET name=?, phone=?, date=?, hours=?, address=?, comment=? WHERE id=?");
+		$query->execute([$delivery->getName(), $delivery->getPhone(), $delivery->getDate(), $delivery->getHours(), $delivery->getAddress(), $delivery->getComment(), $delivery->getId()]);
 		return $this->find($delivery->getId());
 	}
 }
