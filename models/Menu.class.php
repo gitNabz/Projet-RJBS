@@ -5,7 +5,7 @@ class Menu
 	private $name;
 	private $description;
 	private $price;
-	private $id_fnb
+	private $id_fnb;
 
 	public function getId()
 	{
