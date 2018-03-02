@@ -18,7 +18,7 @@ try
 	}
 	$error='';
 	$page = 'home';
-	$access = ['home', 'edit','admin'];
+	$access = ['home','createfnb','carte','menu','admin'];
 	if (isset($_GET['page']))
 	{
 		// Si jamais la page se trouve dans la liste des pages
@@ -40,7 +40,7 @@ try
 	});
 
 
-	
+	require('apps/traitements/fnb.php');
 	require('apps/base.php');
 }
 catch (Exception $e)
