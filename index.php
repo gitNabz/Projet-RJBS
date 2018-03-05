@@ -20,13 +20,8 @@ try
 	$page = 'home';
 
 
-	$access = ['home', 'menu', 'edit','admin', 'booking', 'create'];
 
-	$access = ['home', 'menu', 'edit','admin', 'booking', 'delivery', 'createfnb', 'carte'];
-
-	$access = ['home', 'menu', 'edit','admin', 'booking','createfnb','carte', 'delivery'];
-
-
+	$access = ['home', 'menu', 'edit','admin', 'booking', 'delivery', 'createfnb', 'carte', 'create'];
 	
 	if (isset($_GET['page']))
 	{
@@ -51,6 +46,7 @@ try
 
 	require('apps/traitements/fnb.php');
 	require('apps/traitements/admin.php');
+	require('apps/traitements/booking.php');
 	require('apps/base.php');
 
     var_dump($_SESSION);
