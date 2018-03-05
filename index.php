@@ -19,7 +19,7 @@ try
 	$error='';
 	$page = 'home';
 
-	$access = ['home', 'menu', 'edit','admin', 'booking'];
+	$access = ['home', 'menu', 'edit','admin', 'booking', 'create'];
 
 	$access = ['home','createfnb','carte','menu','admin'];
 
@@ -45,7 +45,9 @@ try
 
 
 	require('apps/traitements/fnb.php');
+	require('apps/traitements/admin.php');
 	require('apps/base.php');
+    var_dump($_SESSION);
 }
 catch (Exception $e)
 {
