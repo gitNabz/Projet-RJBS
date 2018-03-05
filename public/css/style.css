@@ -4,12 +4,10 @@
 }
 
 body {
-<<<<<<< HEAD
     font-family: 'Catamaran', sans-serif;
     font-size: 80.5%;
     color:#111111 ;
     background-color: #F5F5F5;
-=======
 
     font-family: 'Catamaran', sans-serif;
     font-size: 80.5%;
@@ -20,16 +18,8 @@ body {
     color: #363636;
 
     background-color: #F5F5F5;
-
->>>>>>> cf2a47f2399b24b1043e52ae702bb3ef74662953
-
-   
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cf2a47f2399b24b1043e52ae702bb3ef74662953
 
 .carte{
 	background-color: #F4E9E9;
@@ -52,7 +42,7 @@ ul li {
 	flex-wrap: wrap;
 	align-items: center;
 	padding: 20px
-<<<<<<< HEAD
+
 }
 li img {
 	width: 100%
@@ -111,7 +101,7 @@ fieldset {
 	margin-left: 280px
 }
 /*fin create fnb*/
-=======
+
 }
 header a {
     margin: 0 auto;
@@ -193,5 +183,3 @@ footer a {
 li img{
 	width: 100%;
 }
-
->>>>>>> cf2a47f2399b24b1043e52ae702bb3ef74662953
