@@ -4,14 +4,32 @@
 }
 
 body {
+<<<<<<< HEAD
     font-family: 'Catamaran', sans-serif;
     font-size: 80.5%;
     color:#111111 ;
     background-color: #F5F5F5;
+=======
+
+    font-family: 'Catamaran', sans-serif;
+    font-size: 80.5%;
+    color:#111111 ;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+    color: #363636;
+
+    background-color: #F5F5F5;
+
+>>>>>>> cf2a47f2399b24b1043e52ae702bb3ef74662953
 
    
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cf2a47f2399b24b1043e52ae702bb3ef74662953
 
 .carte{
 	background-color: #F4E9E9;
@@ -34,6 +52,7 @@ ul li {
 	flex-wrap: wrap;
 	align-items: center;
 	padding: 20px
+<<<<<<< HEAD
 }
 li img {
 	width: 100%
@@ -92,3 +111,87 @@ fieldset {
 	margin-left: 280px
 }
 /*fin create fnb*/
+=======
+}
+header a {
+    margin: 0 auto;
+    font-size: 2.2em;
+    text-decoration: none;
+    color: #506982;
+}
+
+
+
+img {
+    width: 100%
+}
+
+header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    padding: 5%
+}
+
+#logo {
+    color: #363636;
+    font-size: 8em;
+    font-family: 'Great Vibes';
+}
+
+header nav {
+    margin-right: 5%;
+    display: flex;
+    color: #363636;
+}
+
+header a {
+
+    padding: 4%
+}
+
+.presentation {
+    height: 30%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+
+footer {
+    margin: 0 auto;
+    font-size: 2em;
+    background-color: #E5E5E5;
+    padding: 5%;
+    text-align: center;
+}
+
+footer a {
+    font-size: 1em;
+    padding: 2%;
+    color: black;
+}
+
+#mail {
+    border-radius: 0.2em;
+    border: 0px;
+    padding: 1%;
+}
+
+#subscribe {
+    background-color: #363636;
+    border-radius: 0.2em;
+    border: 0px;
+    padding: 1%;
+    color: white;
+
+}
+
+
+li img{
+	width: 100%;
+}
+
+>>>>>>> cf2a47f2399b24b1043e52ae702bb3ef74662953

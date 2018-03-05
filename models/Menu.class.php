@@ -5,8 +5,14 @@ class Menu
 	private $name;
 	private $description;
 	private $price;
-	private $id_fnb;
 
+    private $pdo;
+    
+    public function __construct($pdo)
+	{
+		$this->pdo = $pdo;
+	}
+    
 	public function getId()
 	{
 		return $this->id;
@@ -35,14 +41,6 @@ class Menu
 	public function setPrice($Price)
 	{
 		$this->price = $price;
-	}
-	public function getId_fnb()
-	{
-		return $this->id_fnb;
-	}
-	public function setId_fnb($Id_fnb)
-	{
-		$this->id_fnb->$id_fnb;
 	}
 
 
