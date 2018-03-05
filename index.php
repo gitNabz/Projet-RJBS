@@ -19,9 +19,8 @@ try
 	$error='';
 	$page = 'home';
 
-	$access = ['home', 'menu', 'edit','admin', 'booking'];
+	$access = ['home', 'menu', 'edit','admin', 'booking', 'delivery', 'createfnb', 'carte'];
 
-	$access = ['home','createfnb','carte','menu','admin'];
 
 	if (isset($_GET['page']))
 	{
@@ -46,6 +45,7 @@ try
 
 	require('apps/traitements/fnb.php');
 	require('apps/base.php');
+
 }
 catch (Exception $e)
 {
