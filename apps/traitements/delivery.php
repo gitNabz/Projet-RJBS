@@ -15,11 +15,13 @@ if (isset($_POST['action']))
 			$hours = $_POST['hours'];
 			$address = $_POST['address'];
 			$comment = $_POST['comment'];
-			$delivery = $manager->create($name, $phone, $date, $hours, $address, $comment);
 
+<<<<<<< HEAD
+=======
 
 			header('Location: index.php?page=home');
 			exit;
+>>>>>>> 8fc5e22ad3ea4548bba110c02ab51aa2f021426b
 		}
 	}
 
