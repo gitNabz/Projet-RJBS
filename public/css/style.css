@@ -4,21 +4,14 @@
 }
 
 body {
-<<<<<<< HEAD
     font-family: 'Catamaran', sans-serif;
     font-size: 80.5%;
     color:#111111 ;
-=======
-    font-family: 'Montserrat', sans-serif;
-    font-size: 62.5%;
-    color: #363636;
->>>>>>> 89179c72c618b94b847d24b3f31e6e63ff606edc
     background-color: #F5F5F5;
-    margin: 0 auto;
 
+   
 }
 
-<<<<<<< HEAD
 
 .carte{
 	background-color: #F4E9E9;
@@ -41,72 +34,61 @@ ul li {
 	flex-wrap: wrap;
 	align-items: center;
 	padding: 20px
-=======
-header a {
-    font-size: 3em;
-    text-decoration: none;
-    color: black;
+}
+li img {
+	width: 100%
 }
 
-header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-around;
-    padding: 3%
-}
+/*createfnb*/
+fieldset {
+ padding:15px 20px 20px 20px;
+ margin-bottom:10px;
+ border:1px solid #F5C5C5;
+ border-radius: 15px;
+  width:420px;
+ }
+ fieldset div{
+ 	display: inline-block;
+ 	padding-right: 30px;
+ }
+ legend{
 
-#logo {
-    color: #363636;
-    font-size: 10em;
-    font-family: 'Great Vibes';
-}
+ 	font-weight:bold;
 
-header nav {
-    margin-right: 5%;
-    display: flex;
-    color: #363636;
-}
+ }
 
-header a {
+ .formfnb input,textarea{
+ 	padding:10px;
+    border:1px solid #F5C5C5;
+    border-radius:5px;
+    width:450px;
+    box-shadow:1px 1px 2px #C0C0C0 inset;
+    display: block;
+    margin: 5px;
+ }
+ .formfnb label{
+ 	font-weight:bold;
+ 	margin-left : 20px;
 
-    padding: 5%
-}
+ }
+ input[type=submit] {
+ width:100px;
+ margin-left:5px;
+ box-shadow:1px 1px 1px grey;
+ cursor:pointer;
+ padding: 8px;
+ }
+ form {
+  margin: 50px auto;
 
-main {
-    background-image: url(/public/img/background.jpg);
-    background-size: cover;
-    padding: 30%;
+  width: 500px; 
+  border: 1px solid #172b4e;
+  border-bottom-color: #142647;
+  border-radius: 5px;
+  background-image: -webkit-radial-gradient(cover,#ffbf00, #ff794d);
+  padding: 20px 50px
+ }
+.create{
+	margin-left: 280px
 }
-
-
-
-footer {
-    margin: 0 auto;
-    font-size: 2em;
-    background-color: #E5E5E5;
-    padding: 5%;
-    text-align: center;
-}
-
-footer a {
-    font-size: 1.5em;
-    padding: 2%;
-    color: black;
-}
-#mail {
-    border-radius: 0.2em;
-    border: 0px;
-    padding: 1%;
-}
-
-#subscribe {
-    background-color: #363636;
-    border-radius: 0.2em;
-    border: 0px;
-    padding: 1%;
-    color: white;
->>>>>>> 89179c72c618b94b847d24b3f31e6e63ff606edc
-}
-li img{
-	width: 100%;
-}
+/*fin create fnb*/
