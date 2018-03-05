@@ -1,0 +1,35 @@
+<form method="POST">
+<p>
+<strong>Nom<span style="color: #ff0000;">*</span>:</strong> 
+<label for="nom"> </label> 
+<input id="nom" name="nom" size="22" type="text"/> 
+
+<strong>Prénom :</strong>
+<label for="prenom"></label>
+<input id="prenom" name="prenom" size="22" type="text" /> <br/><br/> 
+
+<strong>Téléphone<span style="color: #ff0000;">*</span>:
+<label for="telephone"></label>
+</strong> <input id="telephone" name="telephone" size="19" type="text" /> 
+
+<strong>Mail <span style="color: #ff0000;">*</span> :
+</strong><label for="mail"> </label>
+<input id="mail" name="mail" size="22" type="text" />
+</p>
+
+<p>Reserver ?</p>
+<label for="motif"></label> <select id="motif" name="motif">
+<option value="reglement">Reserver une table</option> 
+<option value="enquete_commerciales">Pour 2 personnes</option>
+<option value="enquete_civile">Pour 3 personnes</option> 
+<option value="recouvrement">Pour 4 personnes</option>
+<option value="recouvrement">Pour 5 personnes</option>
+<option value="recouvrement">Pour 6 personnes</option>
+ </select>
+
+<p>Message <span style="color: #ff0000;">*</span> :</p>
+<p><label for="message"></label>
+<textarea id="message" cols="50" rows="7" name="message"></textarea></p>
+<input type="reset" value="Effacer" /> <input type="submit" value="Envoyer"/>
+<p> </p>
+</form>
