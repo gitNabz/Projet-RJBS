@@ -15,11 +15,7 @@ if (isset($_POST['action']))
 			$hours = $_POST['hours'];
 			$address = $_POST['address'];
 			$comment = $_POST['comment'];
-			$delivery = $manager->create($name, $phone, $date, $hours, $address, $comment);
 
-
-			header('Location: index.php?page=menu&id='.$delivery->getId());
-			exit;
 		}
 	}
 
