@@ -18,7 +18,7 @@ if (isset($_POST['action']))
 			$fnb = $manager->create($type, $name, $description, $image, $price);
 		
 			
-			header('Location: index.php?page=menu&id='.$fnb->getId());
+			header('Location: index.php?page=carte&id='.$fnb->getId());
 			exit;
 		}
 	}
