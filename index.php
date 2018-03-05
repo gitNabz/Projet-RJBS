@@ -19,10 +19,9 @@ try
 	$error='';
 	$page = 'home';
 
-	$access = ['home', 'menu', 'edit','admin', 'booking'];
+	$access = ['home', 'menu', 'edit','admin', 'booking','createfnb','carte', 'delivery'];
 
-	$access = ['home','createfnb','carte','menu','admin'];
-
+	
 	if (isset($_GET['page']))
 	{
 		// Si jamais la page se trouve dans la liste des pages
