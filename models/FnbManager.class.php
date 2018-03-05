@@ -47,6 +47,20 @@ class FnbManager
 		$query->execute([$fen->getType(), $fnb->getName(),$fnb->getDescription $fnb->getImage(), $fnb->getPrice(), $fnb->getId()]);
 		return $this->find($fnb->getId());
 	}*/
-
+	public function findByType($type)
+	{
+		$query = $this->pdo->prepare("SELECT * FROM fnb WHERE type=?");
+		$query->execute([$type]);
+		$fnbs = $query->fetchAll(PDO::FETCH_CLASS, 'Fnb',[$this->pdo]);
+		return $fnbs;
+	}
+	/*
+	public function display(Fnb $fnb)
+	{
+		$query = $this->pdo->prepare("SELECT * FROM fnb WHERE type=?");
+		$query->execute([$type]);
+		$fnbs = $query->fetchObject('Fnb',[$this->pdo]);
+		return $fnbs;
+	}*/
 }
 ?>
