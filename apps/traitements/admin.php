@@ -1,6 +1,6 @@
 <?php
 // echo password_hash('toto', PASSWORD_BCRYPT, ["cost" => 12]);
-var_dump($_POST);
+//var_dump($_POST);
 if (isset($_GET['page']) && $_GET['page'] == 'logout')
 {
     session_destroy();

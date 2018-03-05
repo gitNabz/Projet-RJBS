@@ -19,10 +19,15 @@ try
 	$error='';
 	$page = 'home';
 
+
 	$access = ['home', 'menu', 'edit','admin', 'booking', 'create'];
 
-	$access = ['home','createfnb','carte','menu','admin'];
+	$access = ['home', 'menu', 'edit','admin', 'booking', 'delivery', 'createfnb', 'carte'];
 
+	$access = ['home', 'menu', 'edit','admin', 'booking','createfnb','carte', 'delivery'];
+
+
+	
 	if (isset($_GET['page']))
 	{
 		// Si jamais la page se trouve dans la liste des pages
@@ -47,7 +52,10 @@ try
 	require('apps/traitements/fnb.php');
 	require('apps/traitements/admin.php');
 	require('apps/base.php');
+
     var_dump($_SESSION);
+
+
 }
 catch (Exception $e)
 {
