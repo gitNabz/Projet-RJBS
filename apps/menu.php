@@ -1,6 +1,4 @@
- <?php
-
-
+<?php
 
 $manager = new FnbManager($pdo);
 $fnbs = $manager->findAll();
