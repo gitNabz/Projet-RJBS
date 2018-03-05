@@ -1,14 +1,26 @@
 <div class="form-style-8">
-  <h2>menu</h2>
-  <form>
-    <input type="text" name="field1" placeholder="" /> <br>
-    <input type="email" name="field2" placeholder="" /> <br>
-    <input type="url" name="field3" placeholder="" /> <br>
-    <textarea placeholder="" onkeyup="adjust_textarea(this)"></textarea> <br>
-    <input type="button" value="Send Message" />
-  </form>
+    <h2>menu</h2>
+    <form>
+        <input type="text" name="field1" placeholder="" /> <br>
+        <input type="email" name="field2" placeholder="" /> <br>
+        <input type="url" name="field3" placeholder="" /> <br>
+        <textarea placeholder="" onkeyup="adjust_textarea(this)"></textarea> <br>
+        <input type="button" value="Send Message" />
+    </form>
 </div>
 
+<h2>
+    <?=($fnb->getName())?>
+</h2>
+<p>
+    <?=($fnb->getDescription())?>
+</p>
+<img src="<?=$fnb->getImage()?>"><br>
+<p>
+    <h2>
+        <?=($fnb->getPrice())?>
+    </h2>
+</p>
 <h2><?=($fnb->getName())?></h2>
 <p><?=($fnb->getDescription())?></p>
 	<img src="<?=$fnb->getImage()?>"><br>
