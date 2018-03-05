@@ -7,7 +7,7 @@ class Booking
 	private $date;
 	private $hours;
 	private $number;
-	private $comments;
+	private $comment;
 
 	public function getId()
 	{
@@ -53,13 +53,13 @@ class Booking
 	{
 		$this->number = $number;
 	}
-	public function getComments()
+	public function getComment()
 	{
-		return $this->comments;
+		return $this->comment;
 	}
-	public function setComments($Comments)
+	public function setComment($Comment)
 	{
-		$this->comments = $comments;
+		$this->comment = $comment;
 	}
 
 }
