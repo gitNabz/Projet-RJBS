@@ -1,0 +1,96 @@
+/*liste des reservations*/
+.listereservation {
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+
+
+    }
+   
+.listereservation ul{
+    background-image: -webkit-radial-gradient(cover,#ffbf00, #FCA17B);
+    padding: 20px;
+    border-radius: 20px;
+    list-style: none;
+
+
+}
+.carte{
+	background-color: #F4E9E9;
+	text-align: center;
+	width: 85%;
+	margin: 0 auto;
+
+}
+.carte ul {
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.carte ul li {
+	flex: 1 calc(100% / 3);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 20px;
+
+}
+.carte li img {
+	width: 100%
+}
+
+/*createfnb*/
+fieldset {
+ padding:15px 20px 20px 20px;
+ margin-bottom:10px;
+ border:1px solid #F5C5C5;
+ border-radius: 15px;
+  width:420px;
+ }
+ fieldset div{
+ 	display: inline-block;
+ 	padding-right: 30px;
+ }
+ legend{
+
+ 	font-weight:bold;
+
+ }
+
+ .formfnb input,textarea{
+ 	padding:10px;
+    border:1px solid #F5C5C5;
+    border-radius:5px;
+    width:450px;
+    box-shadow:1px 1px 2px #C0C0C0 inset;
+    display: block;
+    margin: 5px;
+ }
+ .formfnb label{
+ 	font-weight:bold;
+ 	margin-left : 20px;
+
+ }
+ input[type=submit] {
+ width:100px;
+ margin-left:5px;
+ box-shadow:1px 1px 1px grey;
+ cursor:pointer;
+ padding: 8px;
+ }
+ form {
+  margin: 50px auto;
+
+  width: 550px; 
+  border: 1px solid #172b4e;
+  border-bottom-color: #142647;
+  border-radius: 5px;
+  background-image: -webkit-radial-gradient(cover,#ffbf00, #FCA17B);
+  padding: 20px 50px
+ }
+
+/*fin create fnb*/
+
