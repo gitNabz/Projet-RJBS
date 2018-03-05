@@ -1,30 +1,40 @@
+<<<<<<< HEAD
+<h1 class="create">Ajouter un Produit</h1>
+=======
 <h1 class="create">Ajouter un plat</h1>
 
+>>>>>>> cf2a47f2399b24b1043e52ae702bb3ef74662953
 
 	<form method="POST">
     <input type="hidden" name="action" value="create">
-   <p>
-       choisir type de plat :<br />
-       <input type="radio" name="type" value="entree" /> <label for="Type">Entrée</label><br />
-       <input type="radio" name="type" value="plat"/> <label for="Type">Plat</label><br />
-       <input type="radio" name="type" value="dessert"  /> <label for="Type">Dessert</label><br />
-       <input type="radio" name="type" value="boisson"/> <label for="Type">Boisson</label>
-   </p>
-
-    <label for="Name">name</label>
-    <input type="text" name="name"  placeholder="name">
-    <br>
-    <br>		<label for="Image">image</label>
-		<input type="url" id="nom" name="image" placeholder="Image"/>
-    <br>
-    <br>
-
- 		<label for="Description">Description:</label>
-  	<input type="text" id="description" name="description" >
-  	<br>
-    <br>
+      <fieldset>
+       <legend>Type du Produit : </legend>
+         <div><input type="radio" name="type" value="entree" /> <label for="Type">Entrée</label></div>
 
 
+         <div><input type="radio" name="type" value="plat"/> <label for="Type">Plat</label></div>
+         
+         <div><input type="radio" name="type" value="dessert"  /> <label for="Type">Dessert</label></div>
+         
+         <div><input type="radio" name="type" value="boisson"/> <label for="Type">Boisson</label></div>
+      </fieldset>
+   
+      <section class="formfnb">
+
+        <label for="Name">name</label>
+        <input type="text" name="name"  placeholder="name">
+    		<label for="Image">image</label>
+    		<input type="url" id="nom" name="image" placeholder="Image"/>
+     		<label for="Description">Description:</label>
+      	<textarea type="text" id="description" name="description" ></textarea>
+        <label for="Contenu">prix :</label>
+        <input type="text" id="price" name="price" />
+
+<<<<<<< HEAD
+      </section>
+    <br>
+    <div><input type="submit" value="Valider"></div>
+=======
     <label for="Contenu">prix :</label>
     <textarea type="text" id="price" name="price" ></textarea>
     <br>
@@ -33,6 +43,7 @@
   	<br>
  		
      	<div><input type="submit" value="Créer fnb"></div>
+>>>>>>> cf2a47f2399b24b1043e52ae702bb3ef74662953
  
 
 </form>
