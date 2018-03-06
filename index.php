@@ -4,7 +4,7 @@ try
 
 	session_start();
 	//var_dump($_SESSION);
-	// Tableau de configuration de PDO
+	
 	$options = [
 		PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 	];
@@ -19,28 +19,23 @@ try
 	$error='';
 	$page = 'home';
 
-
-	$access = ['home', 'menu','createfnb', 'edit','admin','carte','listebookings', 'booking','comments'];
-
-
-	$access = ['home', 'menu','comments', 'edit','admin', 'booking', 'delivery', 'createfnb', 'listebookings','carte', 'create'];
+	$access = ['home', 'menu','comments', 'edit','admin', 'booking', 'delivery', 'createfnb', 'listebookings','carte'];
 	
 	if (isset($_GET['page']))
 	{
-		// Si jamais la page se trouve dans la liste des pages
-		// on peut y accéder
+		
 		if (in_array($_GET['page'], $access))
 		{
 			$page = $_GET['page'];
 		}
-		else // La page ne se trouve pas dans la liste des pages du site on lance ce message
+		else 
 		{
 			throw new Exception('La page n\'existe pas');
 		}
 	}
 
 
-	spl_autoload_register(function($classname)// BONNE VERSION
+	spl_autoload_register(function($classname)
 	{
 		require('models/'.$classname.'.class.php');
 	});

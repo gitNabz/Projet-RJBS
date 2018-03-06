@@ -11,21 +11,21 @@ class CommentManager
 	{
 		$query = $this->pdo->prepare("SELECT * FROM comments WHERE id=?");
 		$query->execute([$id]);
-		$comment = $query->fetchObject('Comment');
-		return $comment;
+		$comments = $query->fetchObject('Comments');
+		return $comments;
 	}
 	public function findAll()
 	{
-		$query = $this->pdo->query("SELECT * FROM comments");
-		$comments = $query->fetchAll(PDO::FETCH_CLASS, 'Comment');
+		$query = $this->pdo->query("SELECT content,name,date FROM comments");
+		$comments = $query->fetchAll(PDO::FETCH_CLASS, 'Comments');
 		return $comments;
 	}
-	public function remove(Comment $comment)// <= type hinting
+	public function remove(Comments $comments)// <= type hinting
 	{
 		$query = $this->pdo->prepare("DELETE FROM comments WHERE id=?");
-		$query->execute([$comment->getId()]);
+		$query->execute([$comments->getId()]);
 	}
-	public function create($content, $id_author, $id_article, $note)
+	public function create($content, $name, $email)
 	{
 		$query = $this->pdo->prepare("INSERT INTO comments (content, name, email) VALUES(?, ?, ?)");
 		$query->execute([$content, $name, $email]);
@@ -33,7 +33,7 @@ class CommentManager
 		return $this->find($id);
 	}
 
-
+}
 
 
 	?>

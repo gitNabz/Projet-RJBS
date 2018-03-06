@@ -31,8 +31,15 @@ class BookingManager
 	}
 	public function create($name, $phone, $date, $hours, $number, $comment)
 	{
+		$booking = new Booking($this->pdo);
+		$booking->setName($name);
+		$booking->setPhone($phone);
+		$booking->setDate($date);
+		$booking->setHours($hours);
+		$booking->setNumber($number);
+		$booking->setComment($comment);
 		$query = $this->pdo->prepare("INSERT INTO booking (name, phone, date, hours, number, comment) VALUES(?, ?, ?, ?, ?, ?)");
-		$query->execute([$name, $phone, $date, $hours, $number, $comment]);
+		$query->execute([$name, $phone, $date, $booking->getHours(), $number, $comment]);
 		$id = $this->pdo->lastInsertId();
 		return $this->find($id);
 	}
