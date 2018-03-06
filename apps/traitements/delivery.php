@@ -1,5 +1,4 @@
 <?php
-//var_dump($_POST);
 if (isset($_POST['action']))
 {
 	$manager = new DeliveryManager($pdo);
@@ -19,5 +18,16 @@ if (isset($_POST['action']))
 			exit;
 		}
 	}
-
+	else if ($action == 'step1')
+	{
+		if (isset($_POST['howmuch'], $_POST['fnbs']))
+		{	
+			// 
+			var_dump($_POST);
+			// $_SESSION
+			// !!
+			exit;
+		}
+	}
+}
 ?>
