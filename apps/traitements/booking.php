@@ -1,5 +1,10 @@
 <?php
+
+//var_dump($_POST);
+
 var_dump($_POST);
+// exit;
+
 if (isset($_POST['action']))
 {
 	$manager = new BookingManager($pdo);
