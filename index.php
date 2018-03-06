@@ -52,7 +52,7 @@ try
 	require('apps/traitements/comments.php');
 	require('apps/base.php');
 
-    var_dump($_SESSION);
+    //var_dump($_SESSION);
 
 
 }
