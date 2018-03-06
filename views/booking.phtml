@@ -1,35 +1,45 @@
 <form method="POST">
+    <input type="hidden" name="action" value="create">
     <p>
-        <strong>Nom<span style="color: #ff0000;">*</span>:</strong>
-        <label for="nom"> </label>
-        <input id="nom" name="nom" size="22" type="text" />
-
-        <strong>Prénom :</strong>
-        <label for="prenom"></label>
-        <input id="prenom" name="prenom" size="22" type="text" /> <br/><br/>
-
-        <strong>Téléphone<span style="color: #ff0000;">*</span>:
-<label for="telephone"></label>
-</strong> <input id="telephone" name="telephone" size="19" type="text" />
-
-        <strong>Mail <span style="color: #ff0000;">*</span> :
-</strong><label for="mail"> </label>
-        <input id="mail" name="mail" size="22" type="text" />
+        <strong>name<span style="color: #ff0000;">*</span>:</strong>
+        <label for="name"> </label>
+        <input id="name" name="name" size="22" type="text"/>
+    <br>
+    <br>
+        <strong>phone<span style="color: #ff0000;">*</span>:
+        <label for="phone"></label>
+        </strong> <input id="phone" name="phone" size="21" type="text" />
+    <br>
+    <br>
     </p>
+    <label for="number"></label> <select id="number" name="number">
+        <option value="number">Table Reservation</option> 
+        <option value="number">Pour 2 personnes</option>
+        <option value="number">Pour 3 personnes</option> 
+        <option value="number">Pour 4 personnes</option>
+        <option value="number">Pour 5 personnes</option>
+        <option value="number">Pour 6 personnes</option>
+    </select>
 
-    <p>Reserver ?</p>
-    <label for="motif"></label> <select id="motif" name="motif">
-<option value="reglement">Reserver une table</option> 
-<option value="enquete_commerciales">Pour 2 personnes</option>
-<option value="enquete_civile">Pour 3 personnes</option> 
-<option value="recouvrement">Pour 4 personnes</option>
-<option value="recouvrement">Pour 5 personnes</option>
-<option value="recouvrement">Pour 6 personnes</option>
- </select>
-
-    <p>Message <span style="color: #ff0000;">*</span> :</p>
-    <p><label for="message"></label>
-        <textarea id="message" cols="50" rows="7" name="message"></textarea></p>
-    <input type="reset" value="Effacer" /> <input type="submit" value="Envoyer" />
-    <p> </p>
+    <label for="hours"></label> <select id="hours" name="hours">
+        <option value="hours">Hours</option> 
+        <option value="hours">18h00</option>
+        <option value="hours">18h15</option>
+        <option value="hours">18h30</option>
+        <option value="hours">18h45</option>
+        <option value="hours">19h00</option>
+        <option value="hours">19h15</option>
+        <option value="hours">19h30</option>
+        <option value="hours">19h45</option>
+        <option value="hours">20h00</option>
+        <option value="hours">20h15</option>
+        <option value="hours">20h30</option>
+        <option value="hours">20h45</option>
+        <option value="hours">21h00</option>
+    </select>
+    <input type="date" name="date">
+    <p>Message<span style="color: #ff0000;">*</span> :</p>
+    <p><label for="comment"></label>
+        <textarea id="comment" cols="50" rows="7" name="comment"></textarea></p>
+    <input type="reset" value="Effacer" /> <input type="submit" value="Envoyer"/>
 </form>
