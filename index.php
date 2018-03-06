@@ -49,6 +49,7 @@ try
 	require('apps/traitements/admin.php');
 	require('apps/traitements/booking.php');
 	require('apps/traitements/comments.php');
+	require('apps/traitements/delivery.php');
 	require('apps/base.php');
 
 
