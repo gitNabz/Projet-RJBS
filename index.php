@@ -20,7 +20,7 @@ try
 	$page = 'home';
 
 
-	$access = ['home', 'menu','comments', 'edit', 'admin', 'booking', 'delivery', 'createfnb', 'listebookings','carte', 'create', 'contact'];
+	$access = ['home', 'menu','comments', 'edit', 'admin', 'booking', 'delivery', 'createfnb', 'listebookings','carte', 'create'];
 
 	if (isset($_GET['page']))
 	{

@@ -32,11 +32,23 @@ class DeliveryManager
 	{
 		return $this->find($id);
 	}
-	public function create($name, $phone, $date, $hours, $address, $comment)
+	public function create($name, $phone, $date, $hours, $address, $comment, $postcode, $city, $list)
 	{
-		$query = $this->pdo->prepare("INSERT INTO delivery (name, phone, date, hours, address, comment) VALUES(?, ?, ?, ?, ?, ?)");
-		$query->execute([$name, $phone, $date, $hours, $address, $comment]);
+		$query = $this->pdo->prepare("INSERT INTO delivery (name, phone, date, hours, address, comment, postcode, city) VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
+		$query->execute([$name, $phone, $date, $hours, $address, $comment, $postcode, $city]);
 		$id = $this->pdo->lastInsertId();
+		$query_link = $this->pdo->prepare("INSERT INTO link_delivery_fnb (id_delivery, id_fnb) VALUES(?, ?)");
+		var_dump($list);
+		foreach ($list AS $info)
+		{
+			$id_fnb = $info['id_fnb'];
+			$quantity = $info['quantity'];
+			while ($quantity > 0)
+			{
+				$query_link->execute([$id, $id_fnb]);
+				$quantity--;
+			}
+		}
 		return $this->find($id);
 	}
 	public function remove(Delivery $delivery)
@@ -46,8 +58,8 @@ class DeliveryManager
 	}
 	public function save(Delivery $delivery)
 	{
-		$query = $this->pdo->prepare("UPDATE delivery SET name=?, phone=?, date=?, hours=?, address=?, comment=? WHERE id=?");
-		$query->execute([$delivery->getName(), $delivery->getPhone(), $delivery->getDate(), $delivery->getHours(), $delivery->getAddress(), $delivery->getComment(), $delivery->getId()]);
+		$query = $this->pdo->prepare("UPDATE delivery SET name=?, phone=?, date=?, hours=?, address=?, comment=?, postcode=?, city=?, WHERE id=?");
+		$query->execute([$delivery->getName(), $delivery->getPhone(), $delivery->getDate(), $delivery->getHours(), $delivery->getAddress(), $delivery->getComment(), $delivery->getPostcode(),$delivery->getCity(), $delivery->getId()]);
 		return $this->find($delivery->getId());
 	}
 }
