@@ -7,19 +7,23 @@ body {
 
     font-family: 'Catamaran', sans-serif;
     font-size: 80.5%;
-    color:#111111 ;
+    color: #111111;
+    background-color: #F5F5F5;
 
+    font-family: 'Catamaran', sans-serif;
+    font-size: 80.5%;
+    color: #111111;
     font-family: 'Montserrat', sans-serif;
     font-size: 62.5%;
     color: #363636;
-
     background-color: #F5F5F5;
 }
 
-}
+
+
 header a {
     margin: 0 auto;
-    font-size: 2.2em;
+    font-size: 1.5em;
     text-decoration: none;
     color: #506982;
 }
@@ -39,7 +43,7 @@ header {
 
 #logo {
     color: #363636;
-    font-size: 8em;
+    font-size: 6em;
     font-family: 'Great Vibes';
 }
 
@@ -94,7 +98,7 @@ footer a {
 }
 
 
-li img{
-	width: 100%;
+li img {
+    width: 100%;
 }
 

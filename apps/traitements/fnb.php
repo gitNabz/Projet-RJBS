@@ -1,5 +1,5 @@
 <?php
-var_dump($_POST);
+//var_dump($_POST);
 if (isset($_POST['action']))
 {
 	$manager = new FnbManager($pdo);
@@ -11,8 +11,7 @@ if (isset($_POST['action']))
 		{
 			var_dump($_POST);
 			$type = $_POST['type'];
-			$name = $_POST['name'];
-			$description= $_POST['description'];
+			$name = $_POST['name']; $description= $_POST['description'];
 			$image = $_POST['image'];
 			$price = $_POST['price'];
 			$fnb = $manager->create($type, $name, $description, $image, $price);

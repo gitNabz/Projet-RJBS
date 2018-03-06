@@ -25,3 +25,5 @@ if (isset($_POST['action']))
 			header('Location: index.php?page=comment&id='.$id);
 			exit;
 		}
+	}
+}		
