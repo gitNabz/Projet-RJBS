@@ -19,8 +19,12 @@ try
 	$error='';
 	$page = 'home';
 
+<<<<<<< HEAD
 
 	$access = ['home', 'menu', 'edit','admin', 'booking', 'delivery', 'createfnb', 'carte', 'create'];
+=======
+	$access = ['home', 'menu','comments', 'edit', 'admin', 'booking', 'delivery', 'createfnb', 'listebookings','carte', 'create'];
+>>>>>>> 25ebfbfce711a85cf9fc30dc83e477b040b620d8
 	
 	if (isset($_GET['page']))
 	{
@@ -36,28 +40,22 @@ try
 		}
 	}
 
-
 	spl_autoload_register(function($classname)// BONNE VERSION
 	{
 		require('models/'.$classname.'.class.php');
 	});
 
-
 	require('apps/traitements/fnb.php');
 	require('apps/traitements/admin.php');
 	require('apps/traitements/booking.php');
+	require('apps/traitements/comments.php');
 	require('apps/base.php');
-
-    var_dump($_SESSION);
-
 
 }
 catch (Exception $e)
 {
 	exit('Erreur : ' . $e->getMessage());
 }
-
-
 
 
 ?>

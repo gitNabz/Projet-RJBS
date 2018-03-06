@@ -11,6 +11,7 @@ if (isset($_GET['page']) && $_GET['page'] == 'logout')
 if (isset($_POST['action']))
 {
     $action = $_POST['action'];
+    
     if ($action == 'login')
     {
         if (isset($_POST['email'], $_POST['password']))
@@ -33,6 +34,12 @@ if (isset($_POST['action']))
         }
     }
     
+    else if ($action == 'logout')
+    {
+           session_destroy();
+            header('Location: index.php');
+            exit; 
+    }
+    
 }
-
 ?>
