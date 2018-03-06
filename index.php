@@ -19,12 +19,7 @@ try
 	$error='';
 	$page = 'home';
 
-<<<<<<< HEAD
-
-	$access = ['home', 'menu', 'edit','admin', 'booking', 'delivery', 'createfnb', 'carte', 'create'];
-=======
 	$access = ['home', 'menu','comments', 'edit', 'admin', 'booking', 'delivery', 'createfnb', 'listebookings','carte', 'create'];
->>>>>>> 25ebfbfce711a85cf9fc30dc83e477b040b620d8
 	
 	if (isset($_GET['page']))
 	{

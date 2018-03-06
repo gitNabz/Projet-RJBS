@@ -1,9 +1,14 @@
-<section class="choices">
-<h2>Merci de cocher ce que vous souhaitez commander ainsi que le nombre de portions :</h2>
+<form method="POST">
+	<input type="hidden" name="action" value="step1">
+<h2 class=>Merci de cocher ce que vous souhaitez commander ainsi que le nombre de portions :</h2>
 <br>
 <br>
-<div><input type="checkbox" name= "choix1" value="choix1" >Foie gras<input type="number" name="howmuch" min="0">
-</div>  
+<?php foreach ($fnbs AS $fnb) : ?>
+	<div><input type="checkbox" name="fnbs[]" value="<?=$fnb->getId()?>"><?=$fnb->getName()?><input type="number" name="howmuch[]" min="0"></div>
+<?php endforeach; ?>
+<br>
+<input type="submit" value="Envoyer">
+<!--
 <div><input type="checkbox" name= "choix2" value="choix2" >Salade César<input type="number" name="howmuch" min="0">
 </div>  
 <div><input type="checkbox" name= "choix3" value="choix3" >Saumon fumé<input type="number" name="howmuch" min="0">
@@ -13,5 +18,5 @@
 <div><input type="checkbox" name= "choix5" value="choix5" >Côte de veau<input type="number" name="howmuch" min="0">
 </div>  
 <div><input type="checkbox" name= "choix6" value="choix6" >Langoustines<input type="number" name="howmuch" min="0">
-</div>
-</section> 
+</div>-->
+</form> 
