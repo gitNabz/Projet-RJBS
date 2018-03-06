@@ -1,5 +1,5 @@
 <?php
-var_dump($_POST);
+//var_dump($_POST);
 if (isset($_POST['action']))
 {
 	$manager = new DeliveryManager($pdo);
@@ -15,13 +15,8 @@ if (isset($_POST['action']))
 			$hours = $_POST['hours'];
 			$address = $_POST['address'];
 			$comment = $_POST['comment'];
-
-<<<<<<< HEAD
-=======
-
 			header('Location: index.php?page=home');
 			exit;
->>>>>>> 8fc5e22ad3ea4548bba110c02ab51aa2f021426b
 		}
 	}
 
