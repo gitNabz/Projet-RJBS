@@ -1,5 +1,5 @@
 <?php
-class Comment
+class Comments
 {
 	private $id;
 	private $name;
@@ -13,7 +13,7 @@ class Comment
 	}
 	public function getName()
 	{
-		return $this->Name;
+		return $this->name;
 	}
 	public function setName($name)
 	{

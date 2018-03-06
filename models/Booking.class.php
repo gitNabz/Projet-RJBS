@@ -17,7 +17,7 @@ class Booking
 	{
 		return $this->name;
 	}
-	public function setName($Name)
+	public function setName($name)
 	{
 		$this->name = $name;
 	}
@@ -25,7 +25,7 @@ class Booking
 	{
 		return $this->phone;
 	}
-	public function setPhone($Phone)
+	public function setPhone($phone)
 	{
 		$this->phone = $phone;
 	}
@@ -33,7 +33,7 @@ class Booking
 	{
 		return $this->date;
 	}
-	public function setDate($Date)
+	public function setDate($date)
 	{
 		$this->date = $date;
 	}
@@ -41,15 +41,16 @@ class Booking
 	{
 		return $this->hours;
 	}
-	public function setHours($Hours)
+	public function setHours($hours)
 	{
+		$hours = str_replace('h', ':', $hours).':00';
 		$this->hours = $hours;
 	}
 	public function getNumber()
 	{
 		return $this->number;
 	}
-	public function setNumber($Number)
+	public function setNumber($number)
 	{
 		$this->number = $number;
 	}
@@ -57,7 +58,7 @@ class Booking
 	{
 		return $this->comment;
 	}
-	public function setComment($Comment)
+	public function setComment($comment)
 	{
 		$this->comment = $comment;
 	}

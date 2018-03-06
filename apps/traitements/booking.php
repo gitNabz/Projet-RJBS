@@ -1,5 +1,10 @@
 <?php
+
+//var_dump($_POST);
+
 var_dump($_POST);
+// exit;
+
 if (isset($_POST['action']))
 {
 	$manager = new BookingManager($pdo);
@@ -17,7 +22,7 @@ if (isset($_POST['action']))
 			$comment = $_POST['comment'];
 			$booking = $manager->create($name, $phone, $date, $hours, $number, $comment);
 			header('Location: index.php?page=home');
-			var_dump($_POST);
+			// var_dump($_POST);
 			exit;
 		}
 	}
