@@ -4,41 +4,41 @@
 }
 
 body {
-    font-family: 'Catamaran', sans-serif;
-    font-size: 80.5%;
-    color: #111111;
-    background-color: #F5F5F5;
-    font-family: 'Catamaran', sans-serif;
-    font-size: 80.5%;
-    color: #111111;
     font-family: 'Montserrat', sans-serif;
     font-size: 62.5%;
-    color: #363636;
+    color: #2D3032;
     background-color: #F5F5F5;
 }
 
-header a {
-    margin: 0 auto;
-    font-size: 1.5em;
-    text-decoration: none;
-    color: #506982;
+h1 {
+    text-align: center;
+    font-size: 3em;
 }
 
-img {
-    width: 100%
+span {
+    color: #AF0A0A
+}
+
+
+/* header*/
+
+.header-distributed h3 {
+    color: #2D3032;
+    font: normal 8em 'Cookie', cursive;
+    margin: 0 0 10px;
+}
+
+.header-distributed h3 span {
+    color: #AF0A0A;
 }
 
 header {
     display: flex;
     justify-content: space-around;
-    padding: 5%
+    padding: 1%;
+    border-bottom: 1px solid #E4E4E4;
 }
 
-#logo {
-    color: #363636;
-    font-size: 6em;
-    font-family: 'Great Vibes';
-}
 
 header nav {
     margin-right: 5%;
@@ -48,50 +48,277 @@ header nav {
 }
 
 header a {
+    margin: 0 auto;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #AF0A0A;
+    font-weight: bold;
     padding: 4%
 }
 
-h1 {
-    text-align: center;
-    font-size: 3em;
+header a:hover {
+    color: #2D3032;
 }
 
-.login input {
-    padding: 8px;
-    border: 0px;
-    border-radius: 5px;
-    width: 450px;
-    display: block;
-    margin: 5px;
-    background-color: white;
-}
+/*main*/
 
-footer .login {
-    border: 0px;
-    border-radius: 5px;
-    margin: 50px auto;
-    width: 550px;
-    border: 1px solid #F2EAE7;
-    border-bottom-color: #142647;
-    border-radius: 5px;
-    padding: 20px 50px
-}
-
-footer {
+main {
+    padding-top: 4%;
     margin: 0 auto;
-    font-size: 1.5em;
-    background-color: #393939;
-    padding: 2%;
-    color: white;
+    width: 950px;
+    padding-bottom: 2%;
+    font: normal 2.1em 'Cookie', cursive;
+    text-align: justify
+}
+
+/* contact */
+
+.contact {
+    display: flex;
     text-align: center;
+    font-size: 1.1em;
+    font-family: 'Montserrat', sans-serif;
 }
 
-footer a {
-    font-size: 1em;
-    padding: 2%;
-    color: white;
+.contact img {
+    width: 70%
 }
 
-li img {
+
+/* carte*/
+
+.carte {
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 4%;
+
+}
+
+.carte ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 1.5em;
+}
+
+.carte ul li {
+    flex: 1 calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px;
+
+
+}
+
+.carte li img {
+    width: 100%
+}
+
+.carte h1 {
+    font: normal 5em 'Cookie', cursive;
+}
+
+/* footer */
+
+.footer-distributed {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
     width: 100%;
+    font: bold 16px sans-serif;
+    text-align: left;
+    padding: 50px 60px 40px;
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+
+.footer-distributed .footer-left {
+    float: left;
+}
+
+/* logo du restaurant */
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0 0 10px;
+}
+
+.footer-distributed h3 span {
+    color: #AF0A0A;
+}
+
+/* liens du footer */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* les icons du footer */
+
+.footer-distributed .footer-icons {
+    margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/* partie droite du footer */
+
+.footer-distributed .footer-right {
+    float: right;
+}
+
+.footer-distributed .footer-right p {
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px 42px 0 0;
+    color: #ffffff;
+}
+
+/* form de connexion administrateur */
+
+.footer-distributed form {
+    display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea {
+    display: block;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+
+    font: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    color: #d1d2d2;
+
+    width: 400px;
+    padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+    color: #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+    color: #5c666b;
+    opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder {
+    color: #5c666b;
+}
+
+
+.footer-distributed form input {
+    height: 55px;
+    margin-bottom: 15px;
+}
+
+.footer-distributed form textarea {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.footer-distributed form button {
+    border-radius: 3px;
+    background-color: #33383b;
+    color: #ffffff;
+    border: 0;
+    padding: 15px 50px;
+    font-weight: bold;
+    float: right;
+}
+
+
+
+@media (max-width: 1000px) {
+
+    .footer-distributed {
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-company-name {
+        font-size: 12px;
+    }
+
+    .footer-distributed form input,
+    .footer-distributed form textarea {
+        width: 250px;
+    }
+
+    .footer-distributed form button {
+        padding: 10px 35px;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .footer-distributed {
+        padding: 30px;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-right {
+        float: none;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .footer-distributed .footer-left {
+        margin-bottom: 40px;
+    }
+
+    .footer-distributed form {
+        margin-top: 30px;
+    }
+
+    .footer-distributed form {
+        display: block;
+    }
+
+    .footer-distributed form button {
+        float: none;
+    }
 }
