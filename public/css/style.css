@@ -36,7 +36,6 @@ img {
 
 header {
     display: flex;
-    align-items: baseline;
     justify-content: space-around;
     padding: 5%
 }
@@ -50,17 +49,14 @@ header {
 header nav {
     margin-right: 5%;
     display: flex;
+    justify-content: space-around;
     color: #363636;
 }
 
 header a {
-
     padding: 4%
 }
 
-.presentation {
-    height: 30%;
-}
 
 h1 {
     text-align: center;

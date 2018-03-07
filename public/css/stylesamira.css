@@ -144,7 +144,7 @@ fieldset {
   padding: 20px 50px;
   border-bottom: 1px solid black;
   }
-  /*dilivery*/
+  /*diliviry*/
   .choixmenu ul {
   display: flex;
   list-style: none;
@@ -162,7 +162,7 @@ fieldset {
 
 }
 .choixmenu li img {
-  width: 50%
+  width: 50%;
 }
 .facture  {
     display:flex;
