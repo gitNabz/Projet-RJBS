@@ -12,13 +12,13 @@ class DeliveryManager
 	{
 		$query = $this->pdo->prepare("SELECT * FROM delivery WHERE id=?");
 		$query->execute ([$id]);
-		$delivery = $query->fetchObject('Delivery');
+		$delivery = $query->fetchObject('Delivery', [$this->pdo]);
 		return $delivery;
 	}
 	public function findAll()
 	{
 		$query = $this->pdo->query("SELECT * FROM delivery");
-		$deliveries = $query->fetchAll (PDO::FETCH_CLASS, 'Delivery');
+		$deliveries = $query->fetchAll (PDO::FETCH_CLASS, 'Delivery', [$this->pdo]);
 		return $deliveries;
 	}
 	// public function findByIdDelivery($id)
@@ -74,5 +74,6 @@ class DeliveryManager
 		$query->execute([$delivery->getName(), $delivery->getEmail(), $delivery->getPhone(), $delivery->getDate(), $delivery->getHours(), $delivery->getAddress(), $delivery->getComment(), $delivery->getPostcode(),$delivery->getCity(), $delivery->getId()]);
 		return $this->find($delivery->getId());
 	}
+	
 }
 ?>

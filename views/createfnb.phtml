@@ -1,26 +1,15 @@
-
-
 <h1 class="create">
     Ajouter un Produit</h1>
-
-
 <form method="POST">
     <input type="hidden" name="action" value="create">
-
-      <fieldset>
-       <legend>Type du Produit : </legend>
-         <div><input type="radio" name="type" value="entree" /> <label for="Type">Entrée</label></div>
-
+    <fieldset>
+        <legend>Type du Produit : </legend>
+        <div><input type="radio" name="type" value="entree" /> <label for="Type">Entrée</label></div>
         <div><input type="radio" name="type" value="plat" /> <label for="Type">Plat</label></div>
-
         <div><input type="radio" name="type" value="dessert" /> <label for="Type">Dessert</label></div>
-
         <div><input type="radio" name="type" value="boisson" /> <label for="Type">Boisson</label></div>
     </fieldset>
-
-      <section class="formfnb">
-
-
+    <section class="formfnb">
         <label for="Name">Nom</label>
         <input type="text" name="name" placeholder="name">
         <label for="Image">Image</label>
@@ -29,9 +18,7 @@
         <textarea type="text" id="description" name="description"></textarea>
         <label for="Contenu">Prix :</label>
         <input type="text" id="price" name="price" />
-
     </section>
     <br>
     <div><input type="submit" value="Valider"></div>
-
 </form>
