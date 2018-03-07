@@ -54,13 +54,13 @@ class FnbManager
 		$fnbs = $query->fetchAll(PDO::FETCH_CLASS, 'Fnb',[$this->pdo]);
 		return $fnbs;
 	}
-	/*
-	public function display(Fnb $fnb)
+	public function findByDelivery(Delivery $delivery)
 	{
-		$query = $this->pdo->prepare("SELECT * FROM fnb WHERE type=?");
-		$query->execute([$type]);
-		$fnbs = $query->fetchObject('Fnb',[$this->pdo]);
-		return $fnbs;
-	}*/
+		$query = $this->pdo->prepare("SELECT fnb.* FROM fnb LEFT JOIN link_delivery_fnb ON link_delivery_fnb.id_fnb=fnb.id_fnb WHERE link_delivery_fnb.id_delivery=?");
+		$query->execute([$delivery->getId()]);
+		$fnb = $query->fetchAll(PDO::FETCH_CLASS, 'Fnb',[$this->pdo]);
+		return $fnb;
+	}
+	
 }
 ?>

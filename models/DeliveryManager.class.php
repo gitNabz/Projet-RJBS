@@ -73,6 +73,14 @@ class DeliveryManager
 		$query = $this->pdo->prepare("UPDATE delivery SET name=?, email=?, phone=?, date=?, hours=?, address=?, comment=?, postcode=?, city=?, WHERE id=?");
 		$query->execute([$delivery->getName(), $delivery->getEmail(), $delivery->getPhone(), $delivery->getDate(), $delivery->getHours(), $delivery->getAddress(), $delivery->getComment(), $delivery->getPostcode(),$delivery->getCity(), $delivery->getId()]);
 		return $this->find($delivery->getId());
-	}
+	}/*
+	public function findById($Id)
+	{
+		$query = $this->pdo->prepare("SELECT * FROM delivery WHERE id=?");
+		
+		$query->execute([$id]);
+		$delivery = $query->fetchObject('Delivery', [$this->pdo]);
+		return $delivery;
+	}*/
 }
 ?>
