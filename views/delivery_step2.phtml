@@ -1,18 +1,19 @@
-<form id="formulaire de livraison">
+<form method="POST">
+<input type="hidden" name="action" value="step2">  
   <fieldset>
     <legend>Coordonnées</legend>
     <ol>
       <li>
-        <label for="nom">Nom</label>
-        <input id="nom" name="nom" type="text" placeholder="Nom et prénom">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Nom et prénom">
       </li>
       <li>
         <label for="email">Email</label>
         <input id="email" name="email" type="email" placeholder="exemple@domaine.fr">
       </li>
       <li>
-        <label for="telephone">Téléphone</label>
-        <input id="telephone" name="telephone" type="tel" placeholder="0674215498">
+        <label for="phone">Téléphone</label>
+        <input id="phone" name="phone" type="tel" placeholder="0674215498">
       </li>
     </ol>
   </fieldset>
@@ -21,16 +22,28 @@
     <legend>Adresse de livraison</legend>
       <ol>
         <li>
-          <label for="numerorue">Numéro et Rue</label>
-          <textarea id="numerorue" name="numerorue" rows="4"></textarea>
+          <label for="address">Numéro et Rue</label>
+          <textarea id="address" name="address" rows="4"></textarea>
         </li>
         <li>
-          <label for="codepostal">Code postal</label>
-          <input id="codepostal" name="codepostal" type="text">
+          <label for="postcode">Code postal</label>
+          <input id="postcode" name="postcode" type="text">
         </li>
           <li>
-          <label for="ville">Ville</label>
-          <input id="ville" name="ville" type="text">
+          <label for="city">Ville</label>
+          <input id="city" name="city" type="text">
+        </li>
+          <li>
+          <label for="date">Date</label>
+          <input id="date" name="date" type="date">
+        </li>
+          <li>
+          <label for="hours">Heure</label>
+          <input id="hours" name="hours" type="time">
+        </li>
+          <li>
+          <label for="comment">Commentaire</label>
+          <input id="comment" name="comment" type="text">
         </li>
       </ol>
     </fieldset>

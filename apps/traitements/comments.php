@@ -1,7 +1,5 @@
 <?php
 
-var_dump($_POST);
-
 if (isset($_POST['action']))
 {
 	$manager=new CommentManager($pdo);
@@ -16,7 +14,7 @@ if (isset($_POST['action']))
 			$name = $_POST['name'];
 			$email = $_POST['email'];
 	
-			$comment=$manager->create($content, $name,$email);
+			$comment=$manager->create($content, $name, $email);
 			
 			header('Location: index.php?page=comments&id='.$comment->getId());
 			exit;

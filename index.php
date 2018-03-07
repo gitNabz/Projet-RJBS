@@ -19,7 +19,12 @@ try
 	$error='';
 	$page = 'home';
 
+<<<<<<< HEAD
 	$access = ['home', 'menu','comments', 'edit', 'admin', 'booking', 'delivery', 'createfnb', 'listebookings','carte', 'create', 'contact','delivery_step1','delivery_step2','livraison'];
+=======
+
+	$access = ['home', 'menu','comments', 'edit', 'admin', 'booking', 'delivery', 'createfnb', 'listebookings','carte', 'create'];
+>>>>>>> 518c84f7bb604d066c32ed9c2085d7e9cd00d579
 
 	if (isset($_GET['page']))
 	{
@@ -48,6 +53,7 @@ try
 	require('apps/traitements/admin.php');
 	require('apps/traitements/booking.php');
 	require('apps/traitements/comments.php');
+	require('apps/traitements/delivery.php');
 	require('apps/base.php');
 
 
