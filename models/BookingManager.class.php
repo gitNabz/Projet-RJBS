@@ -49,5 +49,11 @@ class BookingManager
 		$query->execute([$booking->getName(), $booking->getPhone(), $booking->getDate(), $booking->getHours(), $booking->getNumber(), $booking->getComment(), $booking->getId()]);
 		return $this->find($booking->getId());
 	}
+	public function findNext()
+	{
+		$query = $this->pdo->query("SELECT * FROM booking WHERE date>=CURDATE()");
+		$bookings = $query->fetchAll(PDO::FETCH_CLASS, 'Booking');
+		return $bookings;
+	}
 }
 ?>

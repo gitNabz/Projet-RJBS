@@ -139,10 +139,35 @@ fieldset {
 /*display comments*/
 .displaycomments{
   width: 600px; 
+  margin: 0 auto;
   background-color: #F8F1EE;
   padding: 20px 50px;
-  margin-left: 100px;
-  margin-bottom: none;
+  border-bottom: 1px solid black;
   }
+  /*dilivery*/
+  .choixmenu ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.choixmenu ul li {
+  flex: 1 calc(100% / 6);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  
+
+}
+.choixmenu li img {
+  width: 50%
+}
+.facture  {
+    display:flex;
+    justify-content: space-between
+    
+}
 
 

@@ -19,8 +19,7 @@ try
 	$error='';
 	$page = 'home';
 
-
-	$access = ['home', 'menu','comments', 'edit', 'admin', 'booking', 'delivery', 'createfnb', 'listebookings','carte', 'create', 'contact'];
+	$access = ['home', 'menu','comments', 'edit', 'admin', 'booking', 'delivery', 'createfnb', 'listebookings','carte', 'create'];
 
 	if (isset($_GET['page']))
 	{
@@ -49,6 +48,7 @@ try
 	require('apps/traitements/admin.php');
 	require('apps/traitements/booking.php');
 	require('apps/traitements/comments.php');
+	require('apps/traitements/delivery.php');
 	require('apps/base.php');
 
 
