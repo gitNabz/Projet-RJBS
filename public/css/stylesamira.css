@@ -130,7 +130,8 @@ fieldset {
   border-bottom-color: #C3B5AF;
   border-radius: 5px;
   background-image: -webkit-radial-gradient(cover,#FAF3E0, #FFE1D3);
-  padding: 20px 50px
+  padding: 20px 50px;
+  margin-top: 0;
  }
 .note {
     color:black; 
@@ -140,9 +141,14 @@ fieldset {
 .displaycomments{
   width: 600px; 
   margin: 0 auto;
-  background-color: #F8F1EE;
+  background-color: #FEE6D7;
   padding: 20px 50px;
-  border-bottom: 1px solid black;
+
+
+  }
+  .displaycomments p{
+    padding-bottom: 20px;
+     border-bottom: 1px solid #DCD8D8;
   }
   /*diliviry*/
   .choixmenu ul {
@@ -168,6 +174,17 @@ fieldset {
     display:flex;
     justify-content: space-between
     
+}
+.facture{
+    display:flex;
+    justify-content: space-around;
+   
+}
+.facture p{
+    text-align: center;
+}
+.prixtotal{
+  float: right;
 }
 
 

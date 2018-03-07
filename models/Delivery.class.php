@@ -12,6 +12,16 @@ class Delivery
 	private $postcode;
 	private $city;
 
+	private $pdo;
+	private $fnb;
+
+	public function __construct($pdo)
+	{
+		$this->pdo = $pdo;
+	}
+
+
+
 	public function getId()
 	{
 		return $this->id;
@@ -88,6 +98,16 @@ class Delivery
 	{
 		$this->city = $city;
 	}
+	public function getFnb()
+	{
+		if ($this->fnb === null)
+		{
+			$manager = new FnbManager($this->pdo);
+			$this->fnb = $manager->findByDelivery($this);
+		}
+		return $this->fnb;
+	}
+
 
 }
 

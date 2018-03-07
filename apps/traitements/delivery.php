@@ -18,7 +18,8 @@ if (isset($_POST['action']))
 			$postcode = $_POST['postcode'];
 			$city = $_POST['city'];
 			$delivery = $manager->create($name, $email, $phone ,$date, $hours, $address, $comment, $postcode, $city, $_SESSION['delivery']);
-			// header('Location: index.php?page=home&id='.$delivery->getId());
+			unset($_SESSION['delivery']);
+			header('Location: index.php?page=delivery&id='.$delivery->getId());
 			exit;
 		/*	header('Location: index.php?page=home');
 			exit;*/
