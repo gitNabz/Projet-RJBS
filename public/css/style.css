@@ -34,7 +34,6 @@ span {
 
 header {
     display: flex;
-    align-items: baseline;
     justify-content: space-around;
     padding: 1%;
     border-bottom: 1px solid #E4E4E4;
@@ -44,6 +43,7 @@ header {
 header nav {
     margin-right: 5%;
     display: flex;
+    justify-content: space-around;
     color: #363636;
 }
 
