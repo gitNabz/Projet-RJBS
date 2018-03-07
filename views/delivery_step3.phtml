@@ -1,0 +1,35 @@
+<section class="facture">
+<?php
+$total = 0;
+foreach ($fnbs AS $fnb)
+{?>
+
+	<div>
+		<h4>DÉSIGNATION DE PRODUIT</h4>
+		<p><?=$fnb->getName()?><p>
+	</div>
+	<div>
+		<h4>QUANTITÉ</h4>
+		<p><?=$fnb->quantity?><p>
+	</div>
+	<div>
+		<h4>PRIX UNITAIRE</h4>
+		<p><?=$fnb->getPrice()?><p>
+	</div>
+	<div>
+		<h4>PRIX TOTALE DE PRODUIT<h4>
+	    <?=$fnb->getPrice() * $fnb->quantity?>
+	</div>
+		
+	
+<?php
+$total += $fnb->quantity * $fnb->getPrice();
+}
+?>
+</section>
+<section class="prixtotal">
+    <div>
+    	<h2>PRIX TOTAL DE VOTRE COMMANDE EST:</h2>	
+    	<h2><?=$total?> € <h2>
+    </div>
+</section>
