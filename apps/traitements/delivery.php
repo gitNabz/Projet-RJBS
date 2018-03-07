@@ -6,9 +6,10 @@ if (isset($_POST['action']))
 	$action = $_POST['action'];
 	if ($action == 'step2')
 	{
-		if (isset($_POST['name'], $_POST['phone'], $_POST['date'], $_POST['hours'], $_POST['address'], $_POST['comment'], $_POST['postcode'], $_POST['city']))
+		if (isset($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['date'], $_POST['hours'], $_POST['address'], $_POST['comment'], $_POST['postcode'], $_POST['city']))
 		{
 			$name = $_POST['name'];
+			$email = $_POST['email'];
 			$phone = $_POST['phone'];
 			$date = $_POST['date'];
 			$hours = $_POST['hours'];
@@ -16,7 +17,7 @@ if (isset($_POST['action']))
 			$comment = $_POST['comment'];
 			$postcode = $_POST['postcode'];
 			$city = $_POST['city'];
-			$delivery = $manager->create($name, $phone ,$date, $hours, $address, $comment, $postcode, $city, $_SESSION['delivery']);
+			$delivery = $manager->create($name, $email, $phone ,$date, $hours, $address, $comment, $postcode, $city, $_SESSION['delivery']);
 			// header('Location: index.php?page=home&id='.$delivery->getId());
 			exit;
 		/*	header('Location: index.php?page=home');

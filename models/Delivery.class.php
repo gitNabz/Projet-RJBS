@@ -3,11 +3,14 @@ class Delivery
 {
 	private $id;
 	private $name;
+	private $email;	
 	private $phone;
 	private $date;
 	private $hours;
 	private $address;
 	private $comments;
+	private $postcode;
+	private $city;
 
 	public function getId()
 	{
@@ -17,15 +20,23 @@ class Delivery
 	{
 		return $this->name;
 	}
-	public function setName($Name)
+	public function setName($name)
 	{
 		$this->name = $name;
+	}
+	public function getEmail()
+	{
+		return $this->email;
+	}
+	public function setEmail($email)
+	{
+		$this->email = $email;
 	}
 	public function getPhone()
 	{
 		return $this->phone;
 	}
-	public function setPhone($Phone)
+	public function setPhone($phone)
 	{
 		$this->phone = $phone;
 	}
@@ -33,7 +44,7 @@ class Delivery
 	{
 		return $this->date;
 	}
-	public function setDate($Date)
+	public function setDate($date)
 	{
 		$this->date = $date;
 	}
@@ -41,7 +52,7 @@ class Delivery
 	{
 		return $this->hours;
 	}
-	public function setHours($Hours)
+	public function setHours($hours)
 	{
 		$this->hours = $hours;
 	}
@@ -49,22 +60,35 @@ class Delivery
 	{
 		return $this->address;
 	}
-	public function setAddress($Address)
+	public function setAddress($address)
 	{
 		$this->address = $address;
 	}
-	public function getComments()
+	public function getComment()
 	{
-		return $this->comments;
+		return $this->comment;
 	}
-	public function setComments($Comments)
+	public function setComment($comment)
 	{
-		$this->comments = $comments;
+		$this->comment = $comment;
+	}
+	public function getPostcode()
+	{
+		return $this->postcode;
+	}
+	public function setPostcode($postcode)
+	{
+		$this->postcode = $postcode;
+	}
+	public function getCity()
+	{
+		return $this->city;
+	}
+	public function setCity($city)
+	{
+		$this->city = $city;
 	}
 
 }
-
-
-
 
 ?>

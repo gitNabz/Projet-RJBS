@@ -32,10 +32,22 @@ class DeliveryManager
 	{
 		return $this->find($id);
 	}
-	public function create($name, $phone, $date, $hours, $address, $comment, $postcode, $city, $list)
+	public function create($name, $email, $phone, $date, $hours, $address, $comment, $postcode, $city, $list)
 	{
-		$query = $this->pdo->prepare("INSERT INTO delivery (name, phone, date, hours, address, comment, postcode, city) VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
-		$query->execute([$name, $phone, $date, $hours, $address, $comment, $postcode, $city]);
+		$delivery = new Delivery($this->pdo);
+		$delivery->setName($name);
+		$delivery->setEmail($email);
+		$delivery->setPhone($phone);
+		$delivery->setDate($date);
+		$delivery->setHours($hours);
+		$delivery->setAddress($address);
+		$delivery->setComment($comment);
+		$delivery->setPostcode($postcode);
+		$delivery->setCity($city);
+
+
+		$query = $this->pdo->prepare("INSERT INTO delivery (name, email, phone, date, hours, address, comment, postcode, city) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		$query->execute([$delivery->getName(), $delivery->getEmail(), $delivery->getPhone(), $delivery->getDate(), $delivery->getHours(), $delivery->getAddress(), $delivery->getComment(), $delivery->getPostcode(), $delivery->getCity()]);
 		$id = $this->pdo->lastInsertId();
 		$query_link = $this->pdo->prepare("INSERT INTO link_delivery_fnb (id_delivery, id_fnb) VALUES(?, ?)");
 		var_dump($list);
@@ -58,8 +70,8 @@ class DeliveryManager
 	}
 	public function save(Delivery $delivery)
 	{
-		$query = $this->pdo->prepare("UPDATE delivery SET name=?, phone=?, date=?, hours=?, address=?, comment=?, postcode=?, city=?, WHERE id=?");
-		$query->execute([$delivery->getName(), $delivery->getPhone(), $delivery->getDate(), $delivery->getHours(), $delivery->getAddress(), $delivery->getComment(), $delivery->getPostcode(),$delivery->getCity(), $delivery->getId()]);
+		$query = $this->pdo->prepare("UPDATE delivery SET name=?, email=?, phone=?, date=?, hours=?, address=?, comment=?, postcode=?, city=?, WHERE id=?");
+		$query->execute([$delivery->getName(), $delivery->getEmail(), $delivery->getPhone(), $delivery->getDate(), $delivery->getHours(), $delivery->getAddress(), $delivery->getComment(), $delivery->getPostcode(),$delivery->getCity(), $delivery->getId()]);
 		return $this->find($delivery->getId());
 	}
 }
