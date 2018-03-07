@@ -20,10 +20,7 @@ try
 	$page = 'home';
 
 	$access = ['home', 'menu','comments', 'edit', 'admin', 'booking', 'delivery', 'createfnb', 'listebookings','carte', 'create'];
-<<<<<<< HEAD
-
-=======
->>>>>>> b39ab936aab7cae5d7a7f434e94b53011824faf7
+	
 
 	if (isset($_GET['page']))
 	{
