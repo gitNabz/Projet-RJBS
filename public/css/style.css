@@ -4,12 +4,10 @@
 }
 
 body {
-
     font-family: 'Catamaran', sans-serif;
     font-size: 80.5%;
     color: #111111;
     background-color: #F5F5F5;
-
     font-family: 'Catamaran', sans-serif;
     font-size: 80.5%;
     color: #111111;
@@ -19,16 +17,12 @@ body {
     background-color: #F5F5F5;
 }
 
-
-
 header a {
     margin: 0 auto;
     font-size: 1.5em;
     text-decoration: none;
     color: #506982;
 }
-
-
 
 img {
     width: 100%
@@ -57,44 +51,51 @@ header a {
     padding: 4%
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dc7061e5d053a85aa3664cb8e80246eb9c7bc4fc
 h1 {
     text-align: center;
     font-size: 3em;
 }
 
+.login input {
+    padding: 8px;
+    border: 0px;
+    border-radius: 5px;
+    width: 450px;
+    display: block;
+    margin: 5px;
+    background-color: white;
+}
+
+footer .login {
+    border: 0px;
+    border-radius: 5px;
+    margin: 50px auto;
+    width: 550px;
+    border: 1px solid #F2EAE7;
+    border-bottom-color: #142647;
+    border-radius: 5px;
+    padding: 20px 50px
+}
 
 footer {
     margin: 0 auto;
-    font-size: 2em;
-    background-color: #E5E5E5;
-    padding: 5%;
+    font-size: 1.5em;
+    background-color: #393939;
+    padding: 2%;
+    color: white;
     text-align: center;
 }
 
 footer a {
     font-size: 1em;
     padding: 2%;
-    color: black;
-}
-
-#mail {
-    border-radius: 0.2em;
-    border: 0px;
-    padding: 1%;
-}
-
-#subscribe {
-    background-color: #363636;
-    border-radius: 0.2em;
-    border: 0px;
-    padding: 1%;
     color: white;
-
 }
-
 
 li img {
     width: 100%;
 }
-
