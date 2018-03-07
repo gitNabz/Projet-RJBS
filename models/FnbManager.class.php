@@ -56,10 +56,10 @@ class FnbManager
 	}
 	public function findByDelivery(Delivery $delivery)
 	{
-		$query = $this->pdo->prepare("SELECT fnb.* FROM fnb LEFT JOIN link_delivery_fnb ON link_delivery_fnb.id_fnb=fnb.id_fnb WHERE link_delivery_fnb.id_delivery=?");
+		$query = $this->pdo->prepare("SELECT fnb.*, COUNT(fnb.id) AS quantity FROM fnb LEFT JOIN link_delivery_fnb ON link_delivery_fnb.id_fnb=fnb.id WHERE link_delivery_fnb.id_delivery=? GROUP BY fnb.id");
 		$query->execute([$delivery->getId()]);
-		$fnb = $query->fetchAll(PDO::FETCH_CLASS, 'Fnb',[$this->pdo]);
-		return $fnb;
+		$fnbs = $query->fetchAll(PDO::FETCH_CLASS, 'Fnb',[$this->pdo]);
+		return $fnbs;
 	}
 	
 }
